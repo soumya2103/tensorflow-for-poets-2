@@ -72,8 +72,10 @@ SETUP:
    
    The repository has label_image.py which can be used to test the network.For classifying images, copy the following code into your terminal with your input image attached to it. 
    
-   ```python -m scripts.label_image \
+   ```
+   python -m scripts.label_image \
     --graph=tf_files/retrained_graph.pb  \
     --image=[input image]
+   
    ```
    you will obtain results indicating confidence levels of different labels and in this way highest confidence label would be your desired result.
