@@ -15,7 +15,7 @@ SETUP:
 
   This model will use TensorFlow library. You can learn more about it on https://en.wikipedia.org/wiki/TensorFlow. Install it by the following command.
   
-   terminal: 'pip install tensorflow'
+   terminal: '''pip install tensorflow'''
    
    As the codelab was tested on TensorFlow version 1.7, upgrade it by:
    
