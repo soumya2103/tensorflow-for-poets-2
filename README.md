@@ -56,21 +56,19 @@ SETUP:
     
   
   ImageNet does not include any of these flower species we're training on here. However, the kinds of information that make it possible for ImageNet to differentiate among 1,000 classes are also useful for distinguishing other objects. By using this pre-trained network, we are using that information as input to the final classification layer that distinguishes our flower classes.
+
+  The script runs 4,000 training steps. Each step chooses 10 images at random from the training set, finds their bottlenecks from the cache, and feeds them into the final layer to get predictions. Those predictions are then compared against the actual labels, and the results of this comparison is used to update the final layer's weights through a backpropagation process. 
   
+ * Using Retrained Model:
+   The retrained scripts forms two files:
+   
+    * tf_files/retrained_graph.pb, which contains a version of the selected network with a final layer retrained on your categories.
+    * tf_files/retrained_labels.txt, which is a text file containing labels.
+   
+   The repository has label_image.py which can be used to test the network.For classifying images, copy the following code into your terminal with your input image attached to it. 
+   
+   python -m scripts.label_image \
+    --graph=tf_files/retrained_graph.pb  \
+    --image=[input image]
 
-
-There are multiple versions of this codelab depending on which version of the tensorflow libraries you plan on using:
-
-* For [TensorFlow Lite](https://www.tensorflow.org/mobile/tflite/) the new, ground up rewrite targeted at mobile devices
-  use [this version of the codelab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2-tflite) 
-* For the more mature [TensorFlow Mobile](https://www.tensorflow.org/mobile/mobile_intro) use 
-  [this version of the codealab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2).
-
-
-This repo contains simplified and trimmed down version of tensorflow's example image classification apps.
-
-* The TensorFlow Lite version, in `android/tflite`, comes from [tensorflow/contrib/lite/](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite).
-* The Tensorflow Mobile version, in `android/tfmobile`, comes from [tensorflow/examples/android/](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android).
-
-The `scripts` directory contains helpers for the codelab. Some of these come from the main TensorFlow repository, and are included here so you can use them without also downloading the main TensorFlow repo (they are not part of the TensorFlow `pip` installation).
-
+   you will obtain results indicating confidence levels of different labels and in this way highest confidence label would be your desired result.
