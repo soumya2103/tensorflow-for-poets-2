@@ -25,7 +25,7 @@ SETUP:
   
   This repository contains the code used in this codelab. By cloning the repository, you will get to the platform where we will be working. Copy the code in your terminal.
 
-   git clone 
+   git clone https://github.com/soumya2103/tensorflow-for-poets-2
    
    cd tensorflow-for-poets-2
 
