@@ -25,9 +25,12 @@ SETUP:
   
   This repository contains the code used in this codelab. By cloning the repository, you will get to the platform where we will be working. Copy the code in your terminal.
 
-   ``git clone https://github.com/soumya2103/tensorflow-for-poets-2
+   ```
+   git clone https://github.com/soumya2103/tensorflow-for-poets-2
    
-   cd tensorflow-for-poets-2``
+   cd tensorflow-for-poets-2
+   
+   ```
 
 * Download the traning images:
  
@@ -44,7 +47,8 @@ SETUP:
   
   The network is retrained through Inception V3 model. I am not using MobileNet, though its small and effiecient, Because its accuracy is lower than Inception V3. The scripts downloads the pre-trained network and then after adding a last layer of classification onto it, we train it on our images and provide our labels. To start retraining the network, copy the following code on your terminal.
   
-  ```python -m scripts.retrain \
+  ```
+  python -m scripts.retrain \
     --bottleneck_dir=tf_files/bottlenecks \
     --model_dir=tf_files/models \
     --summaries_dir=tf_files/training_summaries \
@@ -53,6 +57,7 @@ SETUP:
     --output_labels=tf_files/retrained_labels.txt \
     --architecture=inception_v3 \
     --image_dir=tf_files/flower_photos \
+   
    ``` 
     
   ImageNet does not include any of these flower species we're training on here. However, the kinds of information that make it possible for ImageNet to differentiate among 1,000 classes are also useful for distinguishing other objects. By using this pre-trained network, we are using that information as input to the final classification layer that distinguishes our flower classes.
