@@ -15,19 +15,19 @@ SETUP:
 
   This model will use TensorFlow library. You can learn more about it on https://en.wikipedia.org/wiki/TensorFlow. Install it by the following command.
   
-   terminal: pip install tensorflow
+   terminal: 'pip install tensorflow'
    
    As the codelab was tested on TensorFlow version 1.7, upgrade it by:
    
-   terminal:  pip install --upgrade "tensorflow==1.7.*"
+   terminal: 'pip install --upgrade "tensorflow==1.7.*"'
    
 * Clone the git repository:
   
   This repository contains the code used in this codelab. By cloning the repository, you will get to the platform where we will be working. Copy the code in your terminal.
 
-   git clone https://github.com/soumya2103/tensorflow-for-poets-2
+   ''git clone https://github.com/soumya2103/tensorflow-for-poets-2
    
-   cd tensorflow-for-poets-2
+   cd tensorflow-for-poets-2''
 
 * Download the traning images:
  
