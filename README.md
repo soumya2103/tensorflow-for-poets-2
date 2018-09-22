@@ -79,3 +79,6 @@ SETUP:
    
    ```
    you will obtain results indicating confidence levels of different labels and in this way highest confidence label would be your desired result.
+ 
+Here is an example where I've given it a sample image and its confidence level indicates that it belongs to roses category
+![SS](https://github.com/soumya2103/tensorflow-for-poets-2/blob/master/Screenshot.png)
